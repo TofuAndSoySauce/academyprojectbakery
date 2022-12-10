@@ -9,17 +9,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.cos.project.dto.ResponseDto;
 import com.cos.project.service.FreeBoardService;
 
 @Controller
 public class FreeBoardController {
 	
-	@Autowired
-	FreeBoardService freeboardService;
+		@Autowired
+		FreeBoardService freeboardService;
 	
 		@GetMapping({"","/"})
-		public String index() {
+		public String main() {
 			return "main";
 		}
 
@@ -29,13 +28,15 @@ public class FreeBoardController {
 		 * Pageable pageable) { model.addAttribute("freeboards",
 		 * freeboardService.글목록(pageable)); return "board/freeBoard"; //index파일 }
 		 */
-		@GetMapping({"/auth/board/freeBoard"})
+		//게시글 목록
+		@GetMapping({"/auth/freeBoard"})
 		public String index(Model model,@PageableDefault(size=3,sort="num",direction=Sort.Direction.DESC) Pageable pageable) {
 			System.out.println("a");
 			
 			model.addAttribute("freeboards", freeboardService.글목록(pageable));
-			return "board/freeBoard"; //index파일
+			return "board/freeBoard"; 
 		}
+		//게시글 작성
 		//USER 권한이 필요
 		@GetMapping({"/board/freeSaveForm"})
 		public String freeSaveForm() {

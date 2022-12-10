@@ -16,10 +16,12 @@ public class UsersController {
 		return "user/loginForm";
 	}
 	
-	//유저 수정 폼 jsp있으면
 	
-	/*
-	 * @GetMapping("/user/updateForm") public String updateForm() {
-	 * return"user/updateForm"; }
-	 */
+	
+	
+	@GetMapping("/user/updateForm") 
+	public String updateForm() {
+		return"user/updateForm"; 
+	}
+	 
 }

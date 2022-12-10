@@ -29,6 +29,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
 @SequenceGenerator(
 		name= "FREEBOARD_SEQ_GENERATOR"
 		, sequenceName= "FREEBOARD_SEQ"
@@ -36,7 +37,7 @@ import lombok.NoArgsConstructor;
 		, allocationSize= 1
 		)
 
-@Entity
+
 public class FreeBoards {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="FREEBOARD_SEQ_GENERATOR")

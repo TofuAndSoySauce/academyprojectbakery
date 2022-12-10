@@ -4,17 +4,18 @@
 <div class="container">
 	<form action="/auth/loginProc" method="POST">
 		<div class="form-group">
-			<label for="username">Username</label> <input type="text"
-				class="form-control" placeholder="Enter Username" 
-				id="username" name="username">
+			<label for="userid">User Id</label> <input type="text"
+				class="form-control" placeholder="Enter User Id" 
+				id="userid" name="userid">
 		</div>
 		<div class="form-group">
 			<label for="password">Password</label> <input type="password"
 				class="form-control" placeholder="Enter password" 
 				id="password" name="password">
 		</div>
-		</form>
 		<button type="submit" id="btn-login" class="btn btn-primary">로그인</button>
+		</form>
+		
 </div>
-<script src="/blog/js/user.js"></script>
+<script src="/js/user.js"></script>
 <%@ include file="../layout/footer.jsp"%>

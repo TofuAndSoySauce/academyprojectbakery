@@ -9,13 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 
 import org.hibernate.annotations.CreationTimestamp;
-
-import com.cos.project.model.FreeBoards;
-import com.cos.project.model.Users;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,6 +22,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
 @SequenceGenerator(
 		name="USER_SEQ_GENERATOR3"
 		, sequenceName = "USER_SEQ3"
@@ -33,7 +30,7 @@ import lombok.NoArgsConstructor;
 		, allocationSize = 1
 		)
 
-@Entity
+
 public class Replys {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="REVIEW_SEQ_GENERATOR")

@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import com.cos.project.config.auth.PrincipalDetail;
 import com.cos.project.config.auth.PrincipalDetailService;
 //빈등록: 스프링 컨테이너에서 객체를 관리할수있게해준다
 @Configuration //빈등록 loc관리
@@ -35,7 +36,7 @@ public class Securityconfig extends WebSecurityConfigurerAdapter{
 			.authenticated() //인증이 필요
 		.and()
 			.formLogin()
-			.loginPage("/auth/loginForm").failureUrl("/auth/loginForm")
+			.loginPage("/auth/loginForm")
 			.loginProcessingUrl("/auth/loginProc") //실제 페이지은 없으나 해당 url을 중간에 가로채서 실행한다.
 			//스프링 시큐리티가 해당 주소로 요청오는 로그인을 가로채서 대신 로그인 한다.
 			//가로채서 로그인 할때 그때 만들어야할 클래스가있다

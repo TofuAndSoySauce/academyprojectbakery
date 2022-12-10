@@ -1,5 +1,7 @@
 package com.cos.project.model;
 
+
+
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -25,6 +27,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Entity
 @SequenceGenerator(
 		name="USER_SEQ_GENERATOR"
 		, sequenceName= "USER_SEQ"
@@ -32,7 +35,7 @@ import lombok.NoArgsConstructor;
 		, allocationSize= 1
 		)
 
-@Entity
+
 public class Users {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="USER_SEQ_GENERATOR")

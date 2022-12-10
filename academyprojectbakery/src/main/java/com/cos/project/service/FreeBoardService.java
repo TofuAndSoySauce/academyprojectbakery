@@ -55,7 +55,7 @@ public class FreeBoardService {
 	}
 	@Transactional
 	public void 글수정하기(int num, FreeBoards requestBoard) {
-		FreeBoards freeboard = freeboardRepository.findById(num).orElseThrow(() -> {
+		FreeBoards freeboard = freeboardRepository.findByNum(num).orElseThrow(() -> {
 			return new IllegalArgumentException("글 찾기 실패: 아이디를 찾을 수 없습니다.");
 		}); 
 		freeboard.setTitle(requestBoard.getTitle());
