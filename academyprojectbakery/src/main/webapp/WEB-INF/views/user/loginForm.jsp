@@ -4,9 +4,8 @@
 <div class="container">
 	<form action="/auth/loginProc" method="POST">
 		<div class="form-group">
-			<label for="userid">User Id</label> <input type="text"
-				class="form-control" placeholder="Enter User Id" 
-				id="userid" name="userid">
+			<label for="username">Username</label>
+			<input id="username" type="text" class="form-control" placeholder="Enter Username" name="username">
 		</div>
 		<div class="form-group">
 			<label for="password">Password</label> <input type="password"
@@ -17,5 +16,5 @@
 		</form>
 		
 </div>
-<script src="/js/user.js"></script>
+
 <%@ include file="../layout/footer.jsp"%>

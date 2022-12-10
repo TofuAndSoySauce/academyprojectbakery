@@ -14,13 +14,13 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
   mvc:
     view:
-      prefix: /WEB-INF/views/
+      prefix: /WEB-INF/Views/
       suffix: .jsp
         
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       #JPA가 사용하는 기본 넘버링 전략을 사용하지 않는다.
